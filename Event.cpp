@@ -42,7 +42,7 @@ void Event::update(void)
 
 void Event::update(unsigned long now)
 {
-	if (now - lastEventTime >= period)
+	if (((now - lastEventTime >= timeON)&&(pinState))||((now - lastEventTime >= timeOFF)&&(!pinState)))
 	{
 		switch (eventType)
 		{

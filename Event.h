@@ -37,8 +37,9 @@ public:
   void update(void);
   void update(unsigned long now);
   int8_t eventType;
-  unsigned long period;
   int repeatCount;
+  unsigned long timeON;
+  unsigned long timeOFF;
   uint8_t pin;
   uint8_t pinState;
   void (*callback)(void);
